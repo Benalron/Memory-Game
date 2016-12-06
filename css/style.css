@@ -1,0 +1,114 @@
+body{
+  background-color: #F9F2E1;
+  font-family: 'Sumana', cursive;
+  color: #242624;
+}
+
+#winningBox {
+  padding: 20px;
+  width: 300px;
+  background-color:#B3CADA;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  margin-top: 170px;
+  z-index: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 6px solid #242624;
+  outline: 7px solid #D4A45C;
+  box-shadow: 0 0 20px 12px black;
+  font-family: 'Sumana', cursive;
+}
+
+.card-box {
+  width: 100px;
+  height: 100px;
+  margin: 10px 5px 0 5px;
+  position: relative;
+  -webkit-perspective: 800px;
+          perspective: 800px;
+}
+@media only screen and (max-width: 500px){
+  .card-box{
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.card-row {
+  display: inline-block;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transform-origin: right center;
+          transform-origin: right center;  
+}
+
+.card figure {
+  margin: 0;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.56), 0 2px 5px 0 rgba(0, 0, 0, 0.76);
+}
+
+.card .front {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/542135/CardBackSquare.png');
+}
+
+.card .back {
+  -webkit-transform: rotateY( 180deg);
+          transform: rotateY( 180deg);
+}
+
+.card.flipped {
+  -webkit-transform: rotateY( 180deg);
+          transform: rotateY( 180deg);
+  -webkit-transform: translateX( -100%) rotateY( -180deg);
+          transform: translateX( -100%) rotateY( -180deg);
+}
+
+#scoreKeeper {
+  font-size: 24px;
+}
+
+#finalScore {
+  margin: 10px 0 0 0;
+  font-size: 24px;
+}
+#highScore{
+  font-size: 18px;
+}
+#newGame, #reset{
+  font-size: 20px;
+  background: #D4A45C; 
+}
